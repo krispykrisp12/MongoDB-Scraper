@@ -1,0 +1,36 @@
+<div class="container" id="articleArea">
+    <div class="row">
+        <div class="col-md-7">
+            {{#each articleObj}}
+            <div class="row">
+                <div class="col-md-10">
+                    <h2>{{this.title}}</h2>
+                    <img src={{this.image}}>
+                    <a href={{this.link}}>{{this.link}}</a>
+                    <p>{{this.summary}}</p>
+                </div>
+                <div class="col-md-2">
+                    <div class="btn btn-primary addNote" data-id="{{this._id}}">Add Note</div>
+                    <br />
+                    <div class="btn btn-success save" data-id="{{this._id}}">Save Article</div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+        <div class="col-md-5" id="noteForm">
+            <form class="noteArea">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <br />
+                    <input type="text" id="title">
+                </div>
+                <div class="form-group">
+                    <label for="note">Note</label>
+                    <br />
+                    <textarea type="text" id="note"></textarea>
+                </div> 
+                <button class="btn btn-success" id="submitNote" type="submit">Add Note</button>
+            </form>
+        </div>
+    </div>
+</div>
