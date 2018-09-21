@@ -5,7 +5,7 @@ let Schema = mongoose.Schema;
 // Using the Schema constructor, create a new UserSchema object
 // This is similar to a Sequelize model
 let ArticleSchema = new Schema({
-	title: {
+	headline: {
 		type: String,
 		required: true
 	},
@@ -13,7 +13,7 @@ let ArticleSchema = new Schema({
 		type: String,
 		required: true
     },
-    aurthor: {
+    author: {
 		type: String,
 		required: true	
 	},

@@ -68,13 +68,14 @@ app.get("/scrape", function(req, res) {
     
       // Add the text and href of every link, and save them as properties of the result object
       result.headline = $(this)
-        .find("h2.headline").text();
+        .find("h2.headline").text() || "Not found";
+
       result.link = $(this)
-        .find("a").attr("href");
+        .find("a").attr("href")  || "Not found";
       result.summary = $(this)
-        .find("p.summary").text();
+        .children("p.summary").text()  || "Not found";
       result.author = $(this)
-        .find("p.byline").text();
+        .children("p.byline").text()  || "Not found";
       // --------------------------------------------------
       // console.log(results);
       // --------------------------------------------------
@@ -92,7 +93,7 @@ app.get("/scrape", function(req, res) {
     });
 
     // If we were able to successfully scrape and save an Article, send a message to the client
-    res.send("Scrape Complete");
+    // res.send("Scrape Complete");
   });
 });
 // ==================================================================
