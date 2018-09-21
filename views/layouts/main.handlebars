@@ -5,36 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mongo Scraper</title>
-    <link rel="shortcut icon" type="img/jpeg" href="../../public/assets/img/mongo.jpg">
+    {{!-- Title Image --}}
+    <link rel="shortcut icon" type="img/jpeg" href="http://europeanscoutfoundation.com/wp-content/uploads/2018/02/newspaper-1.jpg">
     {{!-- Bootstrap --}}
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     {{!-- Custom Style Sheet --}}
-    <link rel="stylesheet" href="../../public/assets/css/style.css">
-    <style>
-      
-    </style>
+    <link rel="stylesheet" href="../../public/assets/css/style.css" type="text/css">
+    {{!-- Google Fonts --}}
+    <link href="https://fonts.googleapis.com/css?family=Oranienbaum" rel="stylesheet">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Mongo Scraper</a>
+<nav class="navbar navbar-expand-lg navbar-light navbar-st navbar-style">
+  <h1 class="logo">Mongo Scraper</h1>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a href="">Home</a>
-      </li>
-      <li class="nav-item active">
-        <a href="">Saved Articles</a>
+      <li class="nav-item">
+        <a href="/">Home</a>
       </li>
       <li class="nav-item">
-        <button>Get Articles</button>
-      </li>
-      <li class="nav-item">
-        <button>Clear Articles</button>
+        <a href="/saved">Saved Articles</a>
       </li>
     </ul>
+      <div>
+      <button id="article" class="nav-item" href="#">Get Articles</button>
+      </div>
+      <div>
+        <button id="clear" class="nav-item">Clear Articles</button>
+      </div>
   </div>
 </nav>
     {{!-- Body comes from index.handlebars page --}}
